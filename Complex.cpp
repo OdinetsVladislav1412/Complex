@@ -68,7 +68,8 @@ TComplex TComplex::operator*(TComplex& p)
 
 TComplex TComplex::operator/(TComplex& p)
 {
-	try {
+	try 
+	{
 		if ((p.im == 0) && (p.re == 0))
 		{
 			throw(1);
@@ -78,7 +79,9 @@ TComplex TComplex::operator/(TComplex& p)
 		res.im = (im * p.re - re * p.im) / (pow(p.re, 2) + pow(p.im, 2));
 		return res;
 	}
-	catch (int err) {
+	
+	catch (int err) 
+	{
 		std::cout << "Division by zero" << std::endl;
 		return *this;
 	}
